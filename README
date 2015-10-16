@@ -1,0 +1,26 @@
+this is a sample shell
+written by Feng Li on September 29
+
+files:
+	myshell.c the main c file of the project
+	myshell.h includes the required headfile and 
+
+how to run:
+	Makefile is in the package, then command 'make' will gernerate the excutive file 'myshell'
+	chdir to this directory, run './myshell' then you will enter the shell I implemented.
+	after entering the shell, you can input the commands just like you are using a bash, more details about the supported are include in 'What I completed'
+	'CTRL +C' will helps you escape from 'myshell'	
+ 
+What I completed:
+	1. Command sparser, can give alarm when user input the wrong commands.
+	2. File redirection, first command <file, last command >file.
+	3. many pipes supported. eg: cat < myshell.c | more | more | grep 2 | sort
+	4. Suport backgound process. eg: cat myshell.c &
+	5. As a combination of 1~4 myshell can sparse and excute complicated cmds like 'cat < aaa | more | more | grep 2 | sort | head | wc > bbb &'
+
+
+to be improved:
+	1. Support for shell built-in functions, like exit() to exit the current shell, cd to change the current directory.
+	2. In the shell, use the arrows to go through the history input, use tab to autocomplete the command.
+	3. After backgound process terminated, it will often become zombie process, only after you escape from the shell can they be erased.
+
